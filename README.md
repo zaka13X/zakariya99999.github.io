@@ -2,8 +2,11 @@
 Welcome, This is a tutorial on how to make a free eaglercraft server without ANY PC or stupid credits, FUll WSS SUPPORT
 -STEP 1, go to digitalplat.org and register a .DPDNS.ORG SUBDOMAIN
 -WHERE ITS  says NAMESEVERS PAUSE AND OPEN A NEW TAB FOR A SECOND
+
 -GO TO DASH.CLOUDFLARE.COM 
+
 -MAKE A ACCOUNT
+
 -TYPE YOUR DOMAIN AND ADD IT
 -ADD a subdomain record for mc (so like mc like that)
 -WHEN IT ASKS FOR A/AAAA RECORD PAUSE AGAIN
