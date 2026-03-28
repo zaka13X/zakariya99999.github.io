@@ -5,7 +5,7 @@ Welcome, This is a tutorial on how to make a free eag server without ANY PC or s
 -STEP 1, go to digitalplat.org and register a .DPDNS.ORG SUBDOMAIN
 
 
--WHERE ITS  says NAMESEVERS PAUSE AND OPEN A NEW TAB FOR A SECOND
+-WHERE ITS  says NAMESERVERS PAUSE AND OPEN A NEW TAB FOR A SECOND
 
 -GO TO DASH.CLOUDFLARE.COM 
 
@@ -26,7 +26,7 @@ Welcome, This is a tutorial on how to make a free eag server without ANY PC or s
 -MAKE A PAPER 1.8.8 OR 1.12.2 SERVER
 
 
--GET THE IP FROM THE DASHBOARD (minus the port)
+-GET THE IP FROM THE DASHBOARD OF THE SERVER (minus the port)
 
 
 -ADD IT TO THE A RECORD (should start wth like 5.9 or 91.x FOR THE IP)
@@ -38,7 +38,7 @@ Welcome, This is a tutorial on how to make a free eag server without ANY PC or s
 -GO AND MAKE A CLOUDFLARE APPLICATION RULE (you can google how to do this if you dont know how)
 
 
--MAKE A RULE TO REWRITE TO (servers port in dashboard should be 5 digits like 25759 for example)
+-MAKE A RULE TO REWRITE TO port (servers port in dashboard should be 5 digits like 25759 for example)
 
 
 -SET TLS MODE TO "FLEXIBLE"
