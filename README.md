@@ -61,7 +61,7 @@ https://github.com/dmulloy2/ProtocolLib/releases/download/4.8.0/ProtocolLib.jar
 -AND IF IT WORKED GO TO EAGLERCRAFT AND TYPE wss://mc.YOURDOMAINNAME.dpdns.org
 
 
--IT SHOULD WORK FINE WITH WSS AND ALL SITES
+-IT SHOULD WORK FINE WITH WSS AND ALL SITES (eagl hosted on sites and a .html local file both work 9as long as you have internet)
 
 
 -IF YOU KEEP THE SERVER ON FOR TOO LONG ON IDLE MAGAMANODE MAY CHANGE THE IP,
