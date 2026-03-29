@@ -14,10 +14,13 @@ Welcome, This is a tutorial on how to make a free eag server without ANY PC or s
 -TYPE YOUR DOMAIN AND ADD IT
 
 
--ADD a subdomain record for mc (so like mc like that)
+TYPE THE NAMESERVERS YOU GET ON CLOUDFLRE INTO THE DIGITALPLAT NAMESERVERS AND CLICK OK OR ENTER
 
 
--WHEN IT ASKS FOR A/AAAA RECORD PAUSE AGAIN
+-ADD a subdomain record IN CLOUDFLARE for mc (so like mc like that)
+
+
+-WHEN IT ASKS FOR A/AAAA RECORD  IN CLOUDFLARE PAUSE AGAIN
 
 
 -GO TO MAGMANODE.com (OR ANY OTHER FREE HOST)
@@ -29,7 +32,7 @@ Welcome, This is a tutorial on how to make a free eag server without ANY PC or s
 -GET THE IP FROM THE DASHBOARD OF THE SERVER (minus the port)
 
 
--ADD IT TO THE A RECORD (should start wth like 5.9 or 91.x FOR THE IP)
+-ADD IT TO THE A RECORD (should start wth like 5.9 or 91.x or something like that FOR THE IP)
 
 
 -SAVE IT,
@@ -45,15 +48,15 @@ Welcome, This is a tutorial on how to make a free eag server without ANY PC or s
 
 TURN ON ORANGE CLOUD (Proxied, If you dont see it try and clik the grey cloud for google it)
 
--INSTALL EAGLERCRAFTXSERVER FROM HERE COPY PATE THIS LINK FOR IT  -
+-INSTALL EAGLERCRAFTXSERVER FROM HERE COPY PASTE  THIS LINK INTO U BROWSER FOR IT  -
 https://github.com/lax1dude/eaglerxserver/releases/download/v1.0.8/EaglerXServer.jar
 
 
--DOWNLOAD PROTOCOLLIB 4.8.0 FROM HERE
+-DOWNLOAD PROTOCOLLIB 4.8.0 FROM HERE COPY PASTE THIS LINK INTO UR BROWSER
 https://github.com/dmulloy2/ProtocolLib/releases/download/4.8.0/ProtocolLib.jar
 
 
--COPY PASTE THE LINK FOR BOTH OF THESE AND DONWLOAD THEM THEN UPLAOD THEM INTO YOUR SERVERS PLUGIN FOLDER IN THE FILE MANAGER
+-COPY PASTE THE LINK FOR BOTH OF THESE AND DONWLOAD THEM THEN UPLOAD THEM INTO YOUR SERVERS PLUGIN FOLDER IN THE FILE MANAGER
 
 -AND IF IT WORKED GO TO EAGLERCRAFT AND TYPE wss://mc.YOURDOMAINNAME.dpdns.org
 
@@ -61,7 +64,9 @@ https://github.com/dmulloy2/ProtocolLib/releases/download/4.8.0/ProtocolLib.jar
 -IT SHOULD WORK FINE WITH WSS AND ALL SITES
 
 
--IF YOU KEEP THE SERVER ON FOR TOO LONG MAGAMNDOE MAY CHANGE THE IP,
+-IF YOU KEEP THE SERVER ON FOR TOO LONG ON IDLE MAGAMANODE MAY CHANGE THE IP,
+
+I RECOMMEND STOPPING IT WHEN NO ONE IS ONLINE, ITS VERY FAST TO START UP (LESS THAN 5 SECONDS FR)
 
 IF YOU SEE IT NOT WORKING DO THE LINE UNDER HERE
 
