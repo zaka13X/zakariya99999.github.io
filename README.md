@@ -32,7 +32,7 @@ TYPE THE NAMESERVERS YOU GET ON CLOUDFLRE INTO THE DIGITALPLAT NAMESERVERS AND C
 -GET THE IP FROM THE DASHBOARD OF THE SERVER (minus the port)
 
 
--ADD IT TO THE A RECORD (should start wth like 5.9 or 91.x or something like that FOR THE IP)
+-ADD IT TO THE A RECORD (should start wth like 5.9 or 91.x or maybe 167.x or something like that FOR THE IP)
 
 
 -SAVE IT,
