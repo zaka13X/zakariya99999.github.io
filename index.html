@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+: <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,19 +56,18 @@
 
         h2 { color: #ff4d4d; margin-top: 0; font-size: 18px; border-bottom: 1px solid #551111; padding-bottom: 10px; text-transform: uppercase; }
         .input-style { width: 100%; padding: 10px; background: #3d1a1a; color: #fff; border: 1px solid #5e2a2a; border-radius: 4px; margin: 10px 0; }
-        .btn { width: 100%; padding: 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 5px; }
         
-        .btn-play { background: #ff3333; color: white; margin-bottom: 8px; }
+        .btn { width: 100%; padding: 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 5px; }
+        .btn-play { background: #ff3333; color: white; }
         .btn-play:hover { background: #cc0000; transform: translateY(-2px); }
         
-        .btn-onsite { background: #ffffff; color: #8b0000; border: 1px solid #ff3333; }
-        .btn-onsite:hover { background: #eeeeee; transform: translateY(-2px); }
+        .btn-onsite { background: #ffffff; color: #8b0000; border: 1px solid #ff3333; margin-top: 8px; }
+        .btn-onsite:hover { background: #eeeeee; }
 
         .btn-paths { background: #ffa500; color: black; margin-top: 10px; font-size: 12px; }
         .btn-server-help { background: #58a6ff; color: white; margin-top: 10px; font-size: 12px; }
+        .btn-market { background: #444; color: white; font-size: 13px; padding: 8px 12px; width: auto; }
 
-        .btn-market { background: #444; color: white; font-size: 13px; padding: 8px 12px; }
-        
         .server-item { background: rgba(0,0,0,0.3); padding: 10px; margin-bottom: 8px; border-radius: 5px; border-left: 4px solid #ff3333; }
         code { display: block; background: #000; padding: 5px; font-size: 11px; color: #ff9999; margin-top: 5px; border-radius: 3px; overflow-x: auto; }
         
@@ -82,7 +81,7 @@
 <h1 style="text-shadow: 2px 4px 15px rgba(0,0,0,1); color: #fff; font-size: 3rem; margin-top: 20px; z-index: 2;">EAGLER LAUNCHER</h1>
 
 <div class="grid">
-    <!-- LAUNCHER SECTION -->
+    <!-- CLIENT SELECTION CARD -->
     <div class="card">
         <h2>Launch Client</h2>
         <select id="clientSelect" class="input-style">
@@ -90,15 +89,17 @@
                 <option value="TuffBeta-JS" data-path="tuffbeta_js.html">TuffBeta JS (1.21)</option>
                 <option value="TuffBeta-WASM" data-path="tuffbeta_wasm.html">TuffBeta WASM</option>
             </optgroup>
-            <optgroup label="Featured Clients">
-                <option value="Resent" data-path="resent.html">Resent Client</option>
-                <option value="Pixel" data-path="pixel.html">Pixel Client</option>
-                <option value="1.6.4" data-path="Modpack1.6.4.html">Eagler Modpack 1.6.4</option>
+            <optgroup label="Modpacks & Forge">
+                <option value="Eagler Modpack 1.6.4" data-path="Modpack1.6.4.html">Eagler Modpack 1.6.4</option>
                 <option value="EaglerForge" data-path="eaglerforge_1.8.8.html">EaglerForge 1.8.8</option>
             </optgroup>
             <optgroup label="Core Versions">
                 <option value="1.12.2" data-path="1.12.2.html">Eaglercraft 1.12.2</option>
                 <option value="1.8.8" data-path="1.8.8.html">EaglercraftX 1.8.8</option>
+            </optgroup>
+            <optgroup label="Featured Clients">
+                <option value="Resent" data-path="resent.html">Resent Client</option>
+                <option value="Pixel" data-path="pixel.html">Pixel Client</option>
             </optgroup>
         </select>
         
@@ -107,7 +108,7 @@
         <button class="btn btn-paths" onclick="showAllPaths()">SHOW ALL FILE PATHS</button>
     </div>
 
-    <!-- SERVER LIST SECTION -->
+    <!-- MULTIPLAYER CARD -->
     <div class="card">
         <h2>Multiplayer</h2>
         <div class="server-item"><strong>XenaMC</strong> <code>wss://xena.wtf</code></div>
@@ -115,12 +116,15 @@
         <div class="server-item"><strong>DSSX</strong> <code>wss://dssx.us</code></div>
         
         <div style="flex-grow: 1;"></div>
-        <button class="btn btn-server-help" onclick="triggerDownload('server.txt', 'server.txt')">HOW TO MAKE A SERVER</button>
+        <div style="display: flex; gap: 5px;">
+            <button class="btn btn-server-help" style="flex: 2;" onclick="viewServerGuide()">VIEW GUIDE</button>
+            <button class="btn btn-server-help" style="flex: 1; background: #444;" onclick="triggerDownload('server.txt', 'server.txt')">DL</button>
+        </div>
     </div>
 
-    <!-- MARKETPLACE SECTION -->
+    <!-- MARKET & MODS CARD -->
     <div class="card">
-        <h2>Pack Market</h2>
+        <h2>Market & Mods</h2>
         <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
             <strong>1.8 Full Dark GUI</strong>
             <button class="btn btn-market" onclick="triggerDownload('darkgui.zip', '1.8-FullDarkGui.zip')">ADD</button>
@@ -130,9 +134,9 @@
             <button class="btn btn-market" onclick="triggerDownload('cheerleader.zip', 'Cheerleader_16x.zip')">ADD</button>
         </div>
 
-        <div style="margin-top: auto; padding-top: 10px; border-top: 1px solid #444; text-align: center;">
+        <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid #444; text-align: center;">
             <span style="font-size: 11px; color: #ff9999;">For Eagler mods go to</span><br> 
-            <a href="https://github.io" target="_blank" style="color: #fff; font-size: 12px;">eaglerrinth.github.io</a>
+            <a href="https://github.io" target="_blank" style="color: #fff; font-size: 12px; text-decoration: underline;">eaglerrinth.github.io</a>
         </div>
     </div>
 </div>
@@ -143,8 +147,9 @@
 </div>
 
 <script>
+    // NETHER SPARKS GENERATOR
     function createSparks() {
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 35; i++) {
             const spark = document.createElement('div');
             spark.className = 'spark';
             spark.style.left = Math.random() * 100 + 'vw';
@@ -155,37 +160,48 @@
     }
     createSparks();
 
+    // VIEW SERVER.TXT POPUP
+    async function viewServerGuide() {
+        try {
+            const response = await fetch('server.txt');
+            if (!response.ok) throw new Error();
+            const text = await response.text();
+            const guideWindow = window.open("", "ServerGuide", "width=600,height=600");
+            guideWindow.document.write(`
+                <html><head><title>Guide</title><style>
+                body { background: #1a1a1a; color: #ff9999; font-family: monospace; padding: 20px; white-space: pre-wrap; }
+                h1 { color: #ff3333; border-bottom: 1px solid #444; }
+                </style></head><body><h1>Server Creation Guide</h1><div>${text}</div></body></html>
+            `);
+        } catch (e) {
+            alert("Local 'server.txt' not found! Make sure to create it in the same folder.");
+        }
+    }
+
+    // SHOW ALL PATHS POPUP
     function showAllPaths() {
         const select = document.getElementById('clientSelect');
-        const options = select.querySelectorAll('option');
         let pathList = "--- CLIENT PATHS ---\n";
-        
-        options.forEach(opt => {
+        select.querySelectorAll('option').forEach(opt => {
             pathList += `${opt.text}: ./${opt.getAttribute('data-path')}\n`;
         });
-
-        pathList += "\n--- RESOURCE PACK PATHS ---\n";
-        pathList += "1.8 Full Dark GUI: ./darkgui.zip\n";
-        pathList += "Cheerleader 16x: ./cheerleader.zip\n";
-        
-        pathList += "\n--- GUIDES ---\n";
-        pathList += "How to Make a Server: ./server.txt\n";
-
+        pathList += "\n--- MARKET & GUIDES ---\n";
+        pathList += "Dark GUI: ./darkgui.zip\nCheerleader: ./cheerleader.zip\nServer Guide: ./server.txt";
         alert(pathList);
     }
 
+    // DOWNLOAD LOGIC
     function dlClient() {
         const sel = document.getElementById('clientSelect');
         const opt = sel.options[sel.selectedIndex];
-        const path = opt.getAttribute('data-path');
-        triggerDownload(path, path);
+        triggerDownload(opt.getAttribute('data-path'), opt.getAttribute('data-path'));
     }
 
+    // PLAY ON SITE LOGIC
     function playOnSite() {
         const sel = document.getElementById('clientSelect');
         const opt = sel.options[sel.selectedIndex];
-        const path = opt.getAttribute('data-path');
-        window.location.href = path;
+        window.location.href = opt.getAttribute('data-path');
     }
 
     function triggerDownload(path, fileName) {
@@ -201,4 +217,4 @@
 </body>
 </html>
 
-        
+: 
