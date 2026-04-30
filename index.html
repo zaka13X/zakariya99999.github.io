@@ -3,71 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home- zaka13</title>
-    <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAl0lEQVR42mP8//8/AyUYGhqC6VAuA5o4Ay0MBYhXjE8Rsh6SAnRFTAy4ALofmY9LH6XmY7NAnIEWhtSCDYAnS6KAFIsZ0fUToZAcvIBUu8BqAnL8D9V8YvWCDIDpZ2S8YmSFuPSRawByPCH9yIqRNcAsIDREmAnYfEIOYCRCH7kGEC8IsIBuC6hXhKwZ3XvYfESuAVQDmOkSADp9T6m77YmBAAAAAElFTkSuQmCC">
+    <title>Zaka's random ahh site</title>
     <style>
+        :root {
+            --bg-color: #008080; /* Your original teal */
+            --nav-bg: rgba(0, 0, 0, 0.3);
+            --text-white: #ffffff;
+        }
+
         body {
-            background-color: #008080;
-            color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            font-family: 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
             min-height: 100vh;
         }
 
         nav {
-            background: rgba(0, 0, 0, 0.2);
-            width: 100%;
-            padding: 1rem 0;
+            background: var(--nav-bg);
+            padding: 1.2rem;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 25px;
+            backdrop-filter: blur(5px);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
+            font-weight: 600;
+            transition: opacity 0.3s;
         }
 
         nav a:hover {
+            opacity: 0.7;
             text-decoration: underline;
         }
 
         main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            margin-top: 10vh;
-            max-width: 800px;
-            padding: 0 20px;
+            padding: 2rem;
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+        h1 { font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 1rem; }
+        p { font-size: 1.2rem; opacity: 0.85; max-width: 600px; }
     </style>
 </head>
 <body>
 
     <nav>
         <a href="info.html">Info</a>
-        <a href="21.html">Eag Launcher</a>
+        <a href="21.html">Launcher</a>
         <a href="more.html">More</a>
-        <a href="idk.html">Cool stuff</a>
+        <a href="idk.html">Cool Stuff</a>
     </nav>
 
     <main>
-        <h1>Welcome to zakas site</h1>
-        <p>This is mostly random stuff XD look above for other stuff!</p>
+        <h1>Welcome to zaka's site</h1>
+        <p>A simple, fast site for random stuff</p>
     </main>
 
 </body>
 </html>
+
+
