@@ -1,7 +1,7 @@
 <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%; height:100%; margin:0; padding:0;">
-      <iframe src="index.html" style="width:100%; height:100%; border:none; overflow:hidden;" sandbox="allow-scripts allow-same-origin"></iframe>
+      <iframe src="more.html" style="width:100%; height:100%; border:none; overflow:hidden;" sandbox="allow-scripts allow-same-origin"></iframe>
     </div>
   </foreignObject>
 </svg>
