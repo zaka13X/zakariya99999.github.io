@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Status</title>
+    <style>
+        body { font-family: sans-serif; background-color: #1a1a1a; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: #2a2a2a; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); text-align: center; width: 300px; }
+        .status-dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        .online { background-color: #55ff55; }
+        .offline { background-color: #ff5555; }
+        .motd { font-size: 0.9em; color: #ccc; margin: 15px 0; font-style: italic; min-height: 40px; }
+        .players { font-weight: bold; font-size: 1.2em; color: #55ccff; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Server Status</h2>
+    <p><span id="status-dot" class="status-dot"></span> <span id="status-text">Checking...</span></p>
+    <div id="motd" class="motd">Loading MOTD...</div>
+    <div class="players">Players: <span id="player-count">0</span> / <span id="max-players">0</span></div>
+    <p style="font-size: 0.8em; color: #888;">34.31.86.240:25565</p>
+</div>
+
+<script>
+    const serverIP = "34.31.86.240:25565";
+
+    async function checkStatus() {
+        try {
+            // Using the MCSrvStat.us REST API
+            const response = await fetch(`https://mcsrvstat.us{serverIP}`);
+            const data = await response.json();
+
+            const statusDot = document.getElementById('status-dot');
+            const statusText = document.getElementById('status-text');
+            const motdDiv = document.getElementById('motd');
+            const playerCount = document.getElementById('player-count');
+            const maxPlayers = document.getElementById('max-players');
+
+            if (data.online) {
+                statusDot.className = "status-dot online";
+                statusText.innerText = "Online";
+                // Show clean MOTD (stripped of color codes) or HTML formatted version
+                motdDiv.innerHTML = data.motd?.html?.join('<br>') || "Welcome to the server!";
+                playerCount.innerText = data.players.online;
+                maxPlayers.innerText = data.players.max;
+            } else {
+                statusDot.className = "status-dot offline";
+                statusText.innerText = "Offline";
+                motdDiv.innerText = "Server is currently unreachable.";
+            }
+        } catch (error) {
+            console.error("Failed to fetch server status:", error);
+            document.getElementById('status-text').innerText = "Error loading status";
+        }
+    }
+
+    checkStatus();
+</script>
+
+</body>
+</html>
