@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        background-color: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .launch-btn {
+        background: linear-gradient(45deg, #000000, #333333);
+        color: white;
+        border: 2px solid #444;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .launch-btn:hover {
+        border-color: #fff;
+        box-shadow: 0 6px 12px rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+</style>
+</head>
+<body>
+
+<button class="launch-btn" onclick="launchBlank()">LAUNCH</button>
+
+<script>
+function launchBlank() {
+    // 1. PLACEHOLDER: Put your raw Vercel Blob .html file URL here
+    const targetUrl = 'https://ihpsx95z8xw4vafo.public.blob.vercel-storage.com/ModernClient-Offline-JS.html'; 
+    
+    // 2. Open new about:blank tab
+    const newTab = window.open('about:blank', '_blank');
+    
+    if (!newTab) {
+        alert('Popup blocked! Please allow popups for this site. This is only for the games to function properly.');
+        return;
+    }
+
+    // 3. Fetch the content and inject it
+    fetch(targetUrl)
+        .then(response => response.text())
+        .then(html => {
+            newTab.document.open();
+            newTab.document.write(html);
+            newTab.document.close();
+        })
+        .catch(err => {
+            newTab.document.body.innerText = 'Failed to load content: ' + err;
+        });
+}
+</script>
+
+</body>
+</html>
