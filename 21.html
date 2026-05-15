@@ -211,11 +211,122 @@
                 </html>
             '></iframe>
         </div>
+        <div class="server-card">
+            <div class="server-header"><strong>DSSX(IPs, mc.dssx.uk, mc.dssx.uk, eagler.site)</strong></div>
+            <iframe class="status-frame" srcdoc='
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        body { font-family: sans-serif; background: transparent; color: white; margin: 0; padding: 20px; text-align: center; }
+                        .status-badge { display: inline-block; padding: 5px 10px; border-radius: 4px; font-weight: bold; margin-bottom: 15px; }
+                        .online { background: #2ecc71; } .offline { background: #e74c3c; }
+                        .motd { background: #000; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 14px; text-align: left; min-height: 40px; margin: 10px 0; border: 1px solid #444; }
+                    </style>
+                </head>
+                <body>
+                    <div id="status" class="status-badge">Checking...</div>
+                    <div class="motd" id="motd">Loading MOTD...</div>
+                    <div>Players: <span id="player-count">0</span> / <span id="player-max">0</span></div>
+                    <script>
+                        async function update() {
+                            try {
+                                const r = await fetch("https://api.mcstatus.io/v2/status/java/mc.dssx.uk");
+                                const d = await r.json();
+                                document.getElementById("status").className = "status-badge " + (d.online ? "online" : "offline");
+                                document.getElementById("status").textContent = d.online ? "ONLINE" : "OFFLINE";
+                                if(d.online) {
+                                    document.getElementById("motd").innerHTML = d.motd.html;
+                                    document.getElementById("player-count").textContent = d.players.online;
+                                    document.getElementById("player-max").textContent = d.players.max;
+                                }
+                            } catch(e) { document.getElementById("status").textContent = "ERROR"; }
+                        }
+                        update();
+                    </script>
+                </body>
+                </html>
+            '></iframe>
+        </div>
+        </div>
+        <div class="server-card">
+            <div class="server-header"><strong>Pixel Craft</strong></div>
+            <iframe class="status-frame" srcdoc='
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        body { font-family: sans-serif; background: transparent; color: white; margin: 0; padding: 20px; text-align: center; }
+                        .status-badge { display: inline-block; padding: 5px 10px; border-radius: 4px; font-weight: bold; margin-bottom: 15px; }
+                        .online { background: #2ecc71; } .offline { background: #e74c3c; }
+                        .motd { background: #000; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 14px; text-align: left; min-height: 40px; margin: 10px 0; border: 1px solid #444; }
+                    </style>
+                </head>
+                <body>
+                    <div id="status" class="status-badge">Checking...</div>
+                    <div class="motd" id="motd">Loading MOTD...</div>
+                    <div>Players: <span id="player-count">0</span> / <span id="player-max">0</span></div>
+                    <script>
+                        async function update() {
+                            try {
+                                const r = await fetch("https://api.mcstatus.io/v2/status/java/pcsmp.net");
+                                const d = await r.json();
+                                document.getElementById("status").className = "status-badge " + (d.online ? "online" : "offline");
+                                document.getElementById("status").textContent = d.online ? "ONLINE" : "OFFLINE";
+                                if(d.online) {
+                                    document.getElementById("motd").innerHTML = d.motd.html;
+                                    document.getElementById("player-count").textContent = d.players.online;
+                                    document.getElementById("player-max").textContent = d.players.max;
+                                }
+                            } catch(e) { document.getElementById("status").textContent = "ERROR"; }
+                        }
+                        update();
+                    </script>
+                </body>
+                </html>
+            '></iframe>
+        </div>
+<div class="server-card">
+            <div class="server-header"><strong>Beaglecraft</strong></div>
+            <iframe class="status-frame" srcdoc='
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        body { font-family: sans-serif; background: transparent; color: white; margin: 0; padding: 20px; text-align: center; }
+                        .status-badge { display: inline-block; padding: 5px 10px; border-radius: 4px; font-weight: bold; margin-bottom: 15px; }
+                        .online { background: #2ecc71; } .offline { background: #e74c3c; }
+                        .motd { background: #000; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 14px; text-align: left; min-height: 40px; margin: 10px 0; border: 1px solid #444; }
+                    </style>
+                </head>
+                <body>
+                    <div id="status" class="status-badge">Checking...</div>
+                    <div class="motd" id="motd">Loading MOTD...</div>
+                    <div>Players: <span id="player-count">0</span> / <span id="player-max">0</span></div>
+                    <script>
+                        async function update() {
+                            try {
+                                const r = await fetch("https://api.mcstatus.io/v2/status/java/play.beaglecraft.online");
+                                const d = await r.json();
+                                document.getElementById("status").className = "status-badge " + (d.online ? "online" : "offline");
+                                document.getElementById("status").textContent = d.online ? "ONLINE" : "OFFLINE";
+                                if(d.online) {
+                                    document.getElementById("motd").innerHTML = d.motd.html;
+                                    document.getElementById("player-count").textContent = d.players.online;
+                                    document.getElementById("player-max").textContent = d.players.max;
+                                }
+                            } catch(e) { document.getElementById("status").textContent = "ERROR"; }
+                        }
+                        update();
+                    </script>
+                </body>
+                </html>
+            '></iframe>
+        </div>
+
 
         <!-- Repeated for 5 sections as requested -->
-        <div class="server-card"><div class="server-header"><strong>COMING SOON</strong></strong></div><iframe class="status-frame" srcdoc='SOON'></iframe></div>
-        <div class="server-card"><div class="server-header"><strong>COMING SOON</strong></div><iframe class="status-frame" srcdoc='SOON'></iframe></div>
-        <div class="server-card"><div class="server-header"><strong>COMING SOON</strong></div><iframe class="status-frame" srcdoc='SOON'></iframe></div>
+       
 
     </div>
 </div>
