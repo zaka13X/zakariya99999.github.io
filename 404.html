@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    
-    <title>My Drive - Google Drive</title>
-    
-=
-    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Drive -> Google Drive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        #content-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe id="content-frame"></iframe>
+
+    <script>
         
-        const encodedContent = "PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICAgIDx0aXRsZT5BY2Nlc3MgR3JhbnRlZD88L3RpdGxlPg0KICAgIDxzY3JpcHQ+DQogICAgICAgIGZ1bmN0aW9uIGNoZWNrKCkgew0KICAgICAgICAgICAgLy8gVGhlIHBhc3N3b3JkIGlzICJnYW1lcyINCiAgICAgICAgICAgIGNvbnN0IGlucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3B3JykudmFsdWU7DQogICAgICAgICAgICBpZiAoYnRvYShpbnB1dCkgPT09ICJaMkZ0WlhNPSIpIHsNCiAgICAgICAgICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9ICIvMjEuaHRtbCI7DQogICAgICAgICAgICB9IGVsc2Ugew0KICAgICAgICAgICAgICAgIGFsZXJ0KCJXcm9uZyBwYXNzd29yZCEiKTsNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIDwvc2NyaXB0Pg0KPC9oZWFkPg0KPGJvZHkgc3R5bGU9ImJhY2tncm91bmQ6IzExMTsgY29sb3I6IzBmMDsgZm9udC1mYW1pbHk6bW9ub3NwYWNlOyBkaXNwbGF5OmZsZXg7IGZsZXgtZGlyZWN0aW9uOmNvbHVtbjsgYWxpZ24taXRlbXM6Y2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyOyBoZWlnaHQ6MTAwdmg7Ij4NCiAgICA8aDI+RU5URVIgQUNDRVNTIEtFWTwvaDI+DQogICAgPGlucHV0IHR5cGU9InBhc3N3b3JkIiBpZD0icHciIHN0eWxlPSJiYWNrZ3JvdW5kOiMyMjI7IGJvcmRlcjoxcHggc29saWQgIzBmMDsgY29sb3I6IzBmMDsgcGFkZGluZzoxMHB4OyI+DQogICAgPGJ1dHRvbiBvbmNsaWNrPSJjaGVjaygpIiBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyBwYWRkaW5nOjVweCAyMHB4OyBjdXJzb3I6cG9pbnRlcjsiPlNVQk1JVDwvYnV0dG9uPg0KPC9ib2R5Pg0KPC9odG1sPg0K";
-        
-        
-        document.write(atob(encodedContent));
+        const base64Data = "PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICAgIDx0aXRsZT5BY2Nlc3MgR3JhbnRlZD88L3RpdGxlPg0KICAgIDxzY3JpcHQ+DQogICAgICAgIGZ1bmN0aW9uIGNoZWNrKCkgew0KICAgICAgICAgICAgLy8gVGhlIHBhc3N3b3JkIGlzICJnYW1lcyINCiAgICAgICAgICAgIGNvbnN0IGlucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3B3JykudmFsdWU7DQogICAgICAgICAgICBpZiAoYnRvYShpbnB1dCkgPT09ICJaMkZ0WlhNPSIpIHsNCiAgICAgICAgICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9ICIvMjEuaHRtbCI7DQogICAgICAgICAgICB9IGVsc2Ugew0KICAgICAgICAgICAgICAgIGFsZXJ0KCJXcm9uZyBwYXNzd29yZCEiKTsNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIDwvc2NyaXB0Pg0KPC9oZWFkPg0KPGJvZHkgc3R5bGU9ImJhY2tncm91bmQ6IzExMTsgY29sb3I6IzBmMDsgZm9udC1mYW1pbHk6bW9ub3NwYWNlOyBkaXNwbGF5OmZsZXg7IGZsZXgtZGlyZWN0aW9uOmNvbHVtbjsgYWxpZ24taXRlbXM6Y2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyOyBoZWlnaHQ6MTAwdmg7Ij4NCiAgICA8aDI+RU5URVIgQUNDRVNTIEtFWTwvaDI+DQogICAgPGlucHV0IHR5cGU9InBhc3N3b3JkIiBpZD0icHciIHN0eWxlPSJiYWNrZ3JvdW5kOiMyMjI7IGJvcmRlcjoxcHggc29saWQgIzBmMDsgY29sb3I6IzBmMDsgcGFkZGluZzoxMHB4OyI+DQogICAgPGJ1dHRvbiBvbmNsaWNrPSJjaGVjaygpIiBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyBwYWRkaW5nOjVweCAyMHB4OyBjdXJzb3I6cG9pbnRlcjsiPlNVQk1JVDwvYnV0dG9uPg0KPC9ib2R5Pg0KPC9odG1sPg0K";
+
+        try {
+            
+            const binaryString = atob(base64Data);
+            
+            
+            const bytes = new Uint8Array(binaryString.length);
+            for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            const decoder = new TextDecoder('utf-8');
+            const decodedHtml = decoder.decode(bytes);
+
+           
+            const iframe = document.getElementById('content-frame');
+            iframe.contentDocument.open();
+            iframe.contentDocument.write(decodedHtml);
+            iframe.contentDocument.close();
+        } catch (e) {
+            console.error("Failed to load!", e);
+            document.body.innerHTML = "<h3 style='color:red; font-family:sans-serif; text-align:center; margin-top:20px;'>Error: Failed to load!</h3>";
+        }
     </script>
 </body>
 </html>
