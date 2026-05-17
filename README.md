@@ -1,2 +1,2 @@
 Zakas Eaglercraft launcher, Daily updates or updates every 2 days
-URLs are in the file "url.txt"
+URLs are in the file "mirrors.html"
