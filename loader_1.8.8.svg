@@ -5,10 +5,10 @@
         style="width: 100%; height: 100%; border: none; margin: 0; padding: 0;"
         sandbox="allow-scripts allow-forms allow-popups allow-same-origin"
         srcdoc="
-          <!DOCTYPE html>
+          &lt;!DOCTYPE html&lt;
           <html lang='en'>
           <head>
-            <style>
+            &lt;style&lt;
               body {
                 background-color: #121212;
                 display: flex;
@@ -38,9 +38,9 @@
                 transform: translateY(-2px);
               }
             </style>
-          </head>
+          &lt;/head&lt;
           <body>
-            <button class='launch-btn' onclick='launchBlank()'>LAUNCH</button>
+            &lt;button class='launch-btn' onclick='launchBlank()'>LAUNCH</button>
             <script>
               function launchBlank() {
                 const targetUrl = 'https://ihpsx95z8xw4vafo.public.blob.vercel-storage.com/ob-8qNOKHQj0heIDPTPxJdd7af8Ti1gBV';
@@ -61,7 +61,7 @@
                   });
               }
             </script>
-          </body>
+          &lt;/body&lt;
           </html>
         ">
       </iframe>
